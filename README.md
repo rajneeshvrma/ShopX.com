@@ -1,8 +1,8 @@
 # 🛍️ ShopX.com – Internship Project
 
-**ShopX.com** is a front-end e-commerce website built as part of the **Website Design and Development Internship** offered by [Internship Studio](https://internshipstudio.com) (replace with the actual link if available).
+**ShopX.com** is a front-end e-commerce website built as part of the **Website Design and Development Internship** offered by [Internship Studio](https://internshipstudio.com) .
 
-This project showcases essential web development skills including multi-page design, responsive layout (optional), and basic HTML/CSS/JavaScript integration.
+This project showcases essential web development skills including multi-page design, responsive layout, and basic HTML/CSS/JavaScript integration.
 
 ## 🌐 Live Demo
 
