@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8" />
+  <meta name    = "viewport" content = "width=device-width, initial-scale=1.0"/>
+  <title>Product Details - ShopX</title>
+  <link rel="icon" type="images/png" href="Assets/ShopX Logo.jpg" />
+  <link rel = "stylesheet" href = "styles.css" />
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class = "navbar">
+    <div class="logo"><img src="Assets/ShopX Logo.jpg" alt="ShopX"></div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+    </div>
+    <nav>
+      <a href = "home.html">Home</a>
+      <a href = "products.html">Products</a>
+      <a href = "categories.html">Categories</a>
+      <a href = "about.html">About</a>
+      <a href = "contact.html">Contact</a>
+      <a href = "cart.html">
+        <span class="cart-icon-wrapper">
+          <i class = "fas fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </span>Cart
+      </a>
+    </nav>
+  </header>
+
+  <!-- Container for showing product detail -->
+  <div id = "product-details"></div>
+
+  <section class="related-products-section">
+    <h3>Related Products</h3>
+    <div id="related-products" class="related-products"></div>
+  </section>
+
+  
+  <!-- Footer -->
+
+    <footer role="contentinfo" aria-label="Site Footer">
+        <div class="container">
+            <section class="footer-col" aria-labelledby="footer-about">
+                <h2 id="footer-about">About ShopX</h2>
+                <p>ShopX is your ultimate destination for trendy fashion, electronics, and lifestyle products. Quality and great prices delivered with care right to your door.</p>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-customer-service">
+                <h2 id="footer-customer-service">Customer Service</h2>
+                <ul>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">Order Tracking</a></li>
+                    <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Shipping Info</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Contact</h2>
+                <address>
+                    <p>Email: <a href="mailto:support@shopx.com" class="footer-link">support@shopx.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <p>Address: 123 Business St, ShopX, YCity</p>
+                </address>
+            </section>
+        </div>
+
+        <div class="footer-bottom" role="contentinfo">
+            <p>&copy; <span id="current-year"></span> ShopX. All rights reserved.</p>
+        </div>
+    </footer>
+
+  <button id  = "scrollTopBtn">↑</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src = "script.js"></script>
+</body>
+</html>

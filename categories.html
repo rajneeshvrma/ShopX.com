@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categories - ShopX</title>
+  <link rel="icon" type="images/png" href="Assets/ShopX Logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><img src="Assets/ShopX Logo.jpg" alt="ShopX"></div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href = "cart.html">
+        <span class="cart-icon-wrapper">
+          <i class = "fas fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </span>Cart
+      </a>
+    </nav>
+  </header>
+  
+<section class="shop-by-category">
+  <h2>Shop by Category</h2>
+  <div class="categories-grid">
+    <a href="category-view.html?category=Fashion">
+    <div class="category-card">
+      <i class="fas fa-tshirt"></i>
+      <p>Fashion</p>
+      <small>Latest trends in clothing, footwear, and accessories for all styles.</small>
+    </div></a>
+    <a href="category-view.html?category=Electronics">
+    <div class="category-card">
+      <i class="fas fa-laptop"></i>
+      <p>Electronics</p>
+      <small>Explore cutting-edge gadgets, devices, and tech essentials.</small>
+    </div></a>
+    <a href="category-view.html?category=Home%20%26%20Living">
+    <div class="category-card">
+      <i class="fas fa-couch"></i>
+      <p>Home & Living</p>
+      <small>Decor, furniture, and essentials to make your house a cozy home.</small>
+    </div></a>
+    <a href="category-view.html?category=Beauty">
+    <div class="category-card">
+      <i class="fas fa-spray-can-sparkles"></i>
+      <p>Beauty</p>
+      <small>Skincare, makeup, and wellness products to help you glow.</small>
+    </div></a>
+    <a href="category-view.html?category=Groceries">
+    <div class="category-card">
+      <i class="fas fa-apple-alt"></i>
+      <p>Groceries</p>
+      <small>Fresh and everyday essentials delivered right to your door.</small>
+    </div></a>
+    <a href="category-view.html?category=Books">
+    <div class="category-card">
+      <i class="fas fa-book"></i>
+      <p>Books</p>
+      <small>Discover a world of knowledge, fiction, and inspiration.</small>
+    </div></a>
+    <a href="category-view.html?category=Sports">
+    <div class="category-card">
+      <i class="fas fa-dumbbell"></i>
+      <p>Sports</p>
+      <small>Gear and equipment to keep you active and fit.</small>
+    </div></a>
+    <a href="category-view.html?category=Toys%20%26%20Games">
+    <div class="category-card">
+      <i class="fas fa-gamepad"></i>
+      <p>Toys & Games</p>
+      <small>Fun and educational toys for kids of all ages.</small>
+    </div></a>
+  </div>
+</section>
+
+
+<!-- Footer + Scroll Button -->
+
+    <footer role="contentinfo" aria-label="Site Footer">
+        <div class="container">
+            <section class="footer-col" aria-labelledby="footer-about">
+                <h2 id="footer-about">About ShopX</h2>
+                <p>ShopX is your ultimate destination for trendy fashion, electronics, and lifestyle products. Quality and great prices delivered with care right to your door.</p>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-customer-service">
+                <h2 id="footer-customer-service">Customer Service</h2>
+                <ul>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">Order Tracking</a></li>
+                    <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Shipping Info</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Contact</h2>
+                <address>
+                    <p>Email: <a href="mailto:support@shopx.com" class="footer-link">support@shopx.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <p>Address: 123 Business St, ShopX, YCity</p>
+                </address>
+            </section>
+        </div>
+
+        <div class="footer-bottom" role="contentinfo">
+            <p>&copy; <span id="current-year"></span> ShopX. All rights reserved.</p>
+        </div>
+    </footer>
+  <button id="scrollTopBtn">↑</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

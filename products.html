@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <meta name    = "viewport" content = "width=device-width, initial-scale=1.0">
+  <title>Products - ShopX</title>
+  <link rel="icon" type="images/png" href="Assets/ShopX Logo.jpg" />
+  <link rel = "stylesheet" href = "styles.css">
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class = "navbar">
+    <div class="logo"><img src="Assets/ShopX Logo.jpg" alt="ShopX"></div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+    </div>
+    <nav>
+      <a href = "home.html">Home</a>
+      <a href = "products.html">Products</a>
+      <a href = "categories.html">Categories</a>
+      <a href = "about.html">About</a>
+      <a href = "contact.html">Contact</a>
+      <a href = "cart.html">
+        <span class="cart-icon-wrapper">
+          <i class = "fas fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </span>Cart
+      </a>
+    </nav>
+  </header>
+
+  <div class = "container">
+
+    <!-- Sidebar: Filters -->
+    <aside class = "filters">
+      <h3>Filters</h3>
+
+      <!-- Category Filter -->
+      <section class = "filter-category">
+        <h4>Category</h4>
+        <ul>
+          <li><input type = "checkbox" id = "category1" name  = "category" value = "Electronics"><label for = "category1"> Electronics</label></li>
+          <li><input type = "checkbox" id = "category2" name  = "category" value = "Clothing"><label for    = "category2"> Clothing</label></li>
+          <li><input type = "checkbox" id = "category3" name  = "category" value = "Home"><label for        = "category3"> Home & Kitchen</label></li>
+          <li><input type = "checkbox" id = "category4" name  = "category" value = "Books"><label for       = "category4"> Books</label></li>
+          <li><input type = "checkbox" id = "category5" name  = "category" value = "Toys"><label for        = "category5"> Toys</label></li>
+          <li><input type = "checkbox" id = "category6" name  = "category" value = "Beauty"><label for      = "category6"> Beauty</label></li>
+          <li><input type = "checkbox" id = "category7" name  = "category" value = "Sports"><label for      = "category7"> Sports</label></li>
+          <li><input type = "checkbox" id = "category8" name  = "category" value = "Automotive"><label for  = "category8"> Automotive</label></li>
+          <li><input type = "checkbox" id = "category9" name  = "category" value = "Furniture"><label for   = "category9"> Furniture</label></li>
+          <li><input type = "checkbox" id = "category10" name = "category" value = "Food"><label for        = "category10"> Food & Beverages</label></li>
+        </ul>
+      </section>
+
+      <!-- Price Range Filter -->
+      <section class = "filter-price">
+        <h4>Price Range</h4>
+        <label for  = "price-min">Min:
+        <input type = "number" id = "price-min" name = "price-min" min = "0" placeholder = "$0">
+        </label>
+        <label for  = "price-max">Max:
+        <input type = "number" id = "price-max" name = "price-max" min = "0" placeholder = "$1000">
+        </label>
+      </section>
+
+      <button id = "apply-filters" class = "apply-filters-btn">Apply Filters</button>
+    </aside>
+
+    <!-- Main Products List -->
+    <main class = "product-list" id = "product-list">
+      <!-- Products will be added here dynamically -->
+    </main>
+
+  </div>
+
+    <footer role="contentinfo" aria-label="Site Footer">
+        <div class="container">
+            <section class="footer-col" aria-labelledby="footer-about">
+                <h2 id="footer-about">About ShopX</h2>
+                <p>ShopX is your ultimate destination for trendy fashion, electronics, and lifestyle products. Quality and great prices delivered with care right to your door.</p>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-customer-service">
+                <h2 id="footer-customer-service">Customer Service</h2>
+                <ul>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">Order Tracking</a></li>
+                    <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Shipping Info</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Contact</h2>
+                <address>
+                    <p>Email: <a href="mailto:support@shopx.com" class="footer-link">support@shopx.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <p>Address: 123 Business St, ShopX, YCity</p>
+                </address>
+            </section>
+        </div>
+
+        <div class="footer-bottom" role="contentinfo">
+            <p>&copy; <span id="current-year"></span> ShopX. All rights reserved.</p>
+        </div>
+    </footer>
+  <!-- Scroll to Top -->
+  <button id  = "scrollTopBtn">↑</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src = "script.js"></script>
+</body>
+</html>

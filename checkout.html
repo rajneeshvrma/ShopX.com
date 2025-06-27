@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Complete Your Order - ShopX</title>
+  <link rel="icon" type="images/png" href="Assets/ShopX Logo.jpg" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo"><img src="Assets/ShopX Logo.jpg" alt="ShopX"></div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for products..." />
+    </div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="categories.html">Categories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href = "cart.html">
+        <span class="cart-icon-wrapper">
+          <i class = "fas fa-shopping-cart"></i>
+          <span id="cart-count"></span>
+        </span>Cart
+      </a>
+    </nav>
+  </header>
+  <div class="check-header">
+    <h1>Complete Your Order</h1>
+  </div>
+  <main class="checkout-container">
+    <div class="checkout-grid">
+        <section>
+            <h2>Shipping & Payment</h2>
+            <form id="checkout-form"  action="confirmation.html">
+                <div class="form-section-group">
+                    <h3>Shipping Information</h3>
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address1">Address Line 1</label>
+                        <input type="text" id="address1" name="address1" placeholder="123 Main Street" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address2">Address Line 2 (Apt, Suite, etc.)</label>
+                        <input type="text" id="address2" name="address2" placeholder="Apt 4B">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="City Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="State Name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="zipCode">Postal Code</label>
+                            <input type="text" id="zipCode" name="zipCode" placeholder="123456" pattern="[0-9]{6}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select...</option>
+                                <option value="india">India</option>
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 9876543210" pattern="^\+?[0-9]{10,15}$" required>
+                        <div class="error-message" id="phone-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        <div class="error-message" id="email-error"></div>
+                    </div>
+                </div>
+                <div class="form-section-group">
+                    <h3>Payment Method</h3>
+                    <div class="form-group payment-methods">
+                        <div>
+                            <input type="radio" id="cardPayment" name="paymentMethod" value="Card (Credit/Debit)" checked>
+                            <label for="cardPayment">Card (Credit/Debit)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="upiPayment" name="paymentMethod" value="UPI">
+                            <label for="upiPayment">UPI</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="netBanking" name="paymentMethod" value="Net Banking">
+                            <label for="netBanking">Net Banking</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <aside class="order-summary-section">
+            <h2>Order Summary</h2>
+            <div id="order-items-list"></div>
+            <div class="discount-code-section">
+                <label for="discountCode">Discount Code</label>
+                <div class="discount-input-group">
+                    <input type="text" id="discountCode" name="discountCode" placeholder="Enter code">
+                    <button type="button" id="applyDiscountBtn" class="btn">Apply</button>
+                </div>
+                <div id="discount-message" class="messages"></div>
+            </div>
+            <div class="order-totals">
+                <p>Subtotal: <span id="subtotal"></span></p>
+                <p>Discount: <span id="discount-amount"></span></p>
+                <p>Shipping: <span id="shipping"></span></p>
+                <p>Tax (GST): <span id="tax"></span></p>
+                <div class="total-line">
+                    <h3>Order Total:</h3>
+                    <h3><span id="total"></span></h3>
+                </div>
+            </div>
+            <button type="submit" form="checkout-form" class="place-order-btn" id="placeOrderBtn">Place Order Now</button>
+            <p class="security-note">Your payment is secure and encrypted.</p>
+        </aside>
+    </div>
+ </main>
+
+
+  <footer role="contentinfo" aria-label="Site Footer">
+        <div class="container">
+            <section class="footer-col" aria-labelledby="footer-about">
+                <h2 id="footer-about">About ShopX</h2>
+                <p>ShopX is your ultimate destination for trendy fashion, electronics, and lifestyle products. Quality and great prices delivered with care right to your door.</p>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-customer-service">
+                <h2 id="footer-customer-service">Customer Service</h2>
+                <ul>
+                    <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+                    <li><a href="#" class="footer-link">Order Tracking</a></li>
+                    <li><a href="#" class="footer-link">Returns & Refunds</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                    <li><a href="#" class="footer-link">Shipping Info</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-col" aria-labelledby="footer-contact">
+                <h2 id="footer-contact">Contact</h2>
+                <address>
+                    <p>Email: <a href="mailto:support@shopx.com" class="footer-link">support@shopx.com</a></p>
+                    <p>Phone: <a href="tel:+1234567890" class="footer-link">+1 (234) 567-890</a></p>
+                    <p>Address: 123 Business St, ShopX, YCity</p>
+                </address>
+            </section>
+        </div>
+
+        <div class="footer-bottom" role="contentinfo">
+            <p>&copy; <span id="current-year"></span> ShopX. All rights reserved.</p>
+        </div>
+    </footer>
+  <button id="scrollTopBtn">↑</button>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
